@@ -5,7 +5,7 @@ class VisitorsController < ApplicationController
     response_hash = {}
     status = :created
     if visitor.save
-      VisitorsMailer.message_acknowledgement(visitor).deliver_now
+      VisitorMailer.message_acknowledgement(visitor).deliver_now
       response_hash = { success: true }
     else
       response_hash = { errors: visitor.errors, success: false }
