@@ -11,18 +11,19 @@ class TestimonialsController < ApplicationController
       response_hash = {success: true}
     else
       response_hash = { errors: testimonial.errors, success: false }
-      status= :bad_request
+      status = :bad_request
     end
+    render json: response_hash, status: status
   end
 
   def index
     testimonials = Testimonial.all
-    render json :testimonials, status: :ok
+    render json: testimonials, status: :ok
   end
 
   private
   def testimonial_params
-    params.require(:testimonial).permit(:name, :photo, :headline, :quote)
+    params.permit(:name, :headline, :quote, :email, :relation, :avatar)
   end
 
 end

@@ -9,7 +9,7 @@ class VisitorsController < ApplicationController
       response_hash = { success: true }
     else
       response_hash = { errors: visitor.errors, success: false }
-      status= :bad_request
+      status = :bad_request
     end
     render json: response_hash, status: status
   end
