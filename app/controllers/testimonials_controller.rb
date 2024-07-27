@@ -17,11 +17,12 @@ class TestimonialsController < ApplicationController
   end
 
   def index
-    testimonials = Testimonial.all
-    render json: testimonials, status: :ok
+    testimonials = Testimonial.order(created_at: :desc).all
+    render json: testimonials, each_serializer: TestimonialSerializer, status: :ok
   end
 
   private
+
   def testimonial_params
     params.permit(:name, :headline, :quote, :email, :relation, :avatar)
   end
