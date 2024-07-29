@@ -51,3 +51,7 @@ group :development do
   # gem "spring"
 end
 
+group :production do
+  gem 'activerecord-cockroachdb-adapter', '~> 7.0'
+end
+
