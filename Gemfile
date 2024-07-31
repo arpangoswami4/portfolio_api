@@ -37,8 +37,6 @@ gem "rack-cors"
 
 gem "dotenv-rails"
 
-gem 'active_model_serializers'
-
 gem 'pry'
 
 group :development, :test do
