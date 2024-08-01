@@ -9,7 +9,7 @@ development:
   database: portfolio_api_development
   username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
-  host: <%= ENV['DATABASE_URL'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
 
 
 # Warning: The database defined as "test" will be erased and
@@ -20,7 +20,7 @@ test:
   database: portfolio_api_test
   username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
-  host: <%= ENV['DATABASE_URL'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
 
 
 production:
