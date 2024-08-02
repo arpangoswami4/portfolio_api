@@ -29,5 +29,4 @@ production:
   url: <%= ENV['COCKROACHDB_URL'] %>
   port: 26257
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  sslmode: verify-full
-  sslrootcert: /path/to/ca.crt
+
