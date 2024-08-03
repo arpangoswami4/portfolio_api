@@ -73,6 +73,10 @@ Rails.application.configure do
     enable_starttls_auto: true
   }
 
+  Rails.application.routes.default_url_options = {
+    host: 'https://portfolio-api-ca32.onrender.com'
+  }
+
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
