@@ -52,6 +52,7 @@ group :development do
 end
 
 group :production do
-  gem 'activerecord-cockroachdb-adapter', '~> 7.0'
+  gem 'cloudinary'
+  gem 'activestorage-cloudinary-service'
 end
 
