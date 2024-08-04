@@ -5,7 +5,7 @@ class VisitorsController < ApplicationController
     response_hash = {}
     status = :created
     if visitor.save
-      MailgunService(VisitorMailer.message_acknowledgement(visitor), visitor)
+      MailgunService.send_email(VisitorMailer.message_acknowledgement(visitor), visitor)
       response_hash = { success: true }
     else
       response_hash = { errors: visitor.errors, success: false }
