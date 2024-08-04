@@ -61,7 +61,7 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   config.action_mailer.raise_delivery_errors = false
 
-  config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.delivery_method = :smtp
 
   # config.action_mailer.smtp_settings = {
   #   address: 'smtp.gmail.com',
@@ -73,17 +73,17 @@ Rails.application.configure do
   #   enable_starttls_auto: true
   # }
 
-  config.action_mailer.smtp_settings = {
-    address: 'smtp.mailgun.org',
-    port: 2525,
-    domain: ENV["MAILGUN_DOMAIN"],
-    user_name: ENV["MAILGUN_USERNAME"],
-    password: ENV["MAILGUN_PASSWORD"],
-    authentication: :plain,
-    enable_starttls_auto: true
-  }
+  # config.action_mailer.smtp_settings = {
+  #   address: 'smtp.mailgun.org',
+  #   port: 587,
+  #   domain: ENV["MAILGUN_DOMAIN"],
+  #   user_name: ENV["MAILGUN_USERNAME"],
+  #   password: ENV["MAILGUN_PASSWORD"],
+  #   authentication: :plain,
+  #   enable_starttls_auto: true
+  # }
 
-  config.action_mailer.default_url_options = { host: ENV['MAILGUN_DOMAIN'], protocol: 'https' }
+  # config.action_mailer.default_url_options = { host: ENV['MAILGUN_DOMAIN'], protocol: 'https' }
 
   Rails.application.routes.default_url_options = {
     host: 'https://portfolio-api-ca32.onrender.com'

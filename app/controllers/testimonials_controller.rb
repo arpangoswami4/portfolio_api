@@ -6,7 +6,7 @@ class TestimonialsController < ApplicationController
     status = :created
     if testimonial.save
       if testimonial.email.present?
-        TestimonialMailer.testimonial_acknowledgement(testimonial).deliver_now
+        MailgunService(TestimonialMailer.message_acknowledgement(testimonial), testimonial)
       end
       response_hash = {success: true}
     else
