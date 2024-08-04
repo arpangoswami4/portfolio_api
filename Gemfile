@@ -54,5 +54,6 @@ end
 group :production do
   gem 'cloudinary'
   gem 'activestorage-cloudinary-service'
+  gem 'mailgun-ruby', '~> 1.2.0'
 end
 

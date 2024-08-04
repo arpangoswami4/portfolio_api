@@ -63,15 +63,27 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
 
+  # config.action_mailer.smtp_settings = {
+  #   address: 'smtp.gmail.com',
+  #   port: 587,
+  #   domain: 'https://portfolio-api-ca32.onrender.com',
+  #   user_name: ENV["MAIL_USERNAME"],
+  #   password: ENV["MAIL_PASSWORD"],
+  #   authentication: 'plain',
+  #   enable_starttls_auto: true
+  # }
+
   config.action_mailer.smtp_settings = {
-    address: 'smtp.gmail.com',
+    address: 'smtp.mailgun.org',
     port: 587,
-    domain: 'https://portfolio-api-ca32.onrender.com',
-    user_name: ENV["MAIL_USERNAME"],
-    password: ENV["MAIL_PASSWORD"],
-    authentication: 'plain',
+    domain: ENV["MAILGUN_DOMAIN"],
+    user_name: ENV["MAILGUN_USERNAME"],
+    password: ENV["MAILGUN_PASSWORD"],
+    authentication: :plain,
     enable_starttls_auto: true
   }
+
+  config.action_mailer.default_url_options = { host: ENV['MAILGUN_DOMAIN'], protocol: 'https' }
 
   Rails.application.routes.default_url_options = {
     host: 'https://portfolio-api-ca32.onrender.com'
