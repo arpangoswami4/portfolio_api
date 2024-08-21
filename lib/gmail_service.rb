@@ -5,7 +5,7 @@ require 'stringio'
 
 class GmailService
 
-  def def initialize
+  def initialize
     @service = Google::Apis::GmailV1::GmailService.new
     @service.authorization = authorize
   end
