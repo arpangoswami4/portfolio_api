@@ -55,7 +55,7 @@ group :production do
   gem 'cloudinary'
   gem 'activestorage-cloudinary-service'
   gem 'googleauth'
-  gem 'google-api-client', '~> 0.41.0'
+  gem 'google-api-client'
   gem 'stringio'
   gem 'base64'
 end
